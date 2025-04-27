@@ -280,7 +280,7 @@ bool MicroNMEA::process(char c)
 }
 
 
-const char* MicroNMEA::parseTime(const char* s)
+const char* MicroNMEA::parseTime(const char* s) //Some GPS have time with no "." and no digit for decimal seconds other can have up to 6 digits for decimal seconds
 {
 	if (*s == ',')
 		return skipField(s);

@@ -17,6 +17,12 @@ NMEA sentences can easily be sent to an output stream with the
 ``sendSentence()`` function which computes and appends the checksum,
 as well as the correct ``<CR><LF>`` terminators.
 
+Release note :
+    Some GPS return UTC time with up to 6 decimals second
+    Added Get Set Milli seconds
+    Added Get Set Micro seconds
+    Definition of IsValid = ( IsFixValid OR IsDataValid )
+
 License
 -------
 

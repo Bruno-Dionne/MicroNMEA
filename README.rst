@@ -19,10 +19,10 @@ as well as the correct ``<CR><LF>`` terminators.
 
 Release note :
     Handle UTC time :
-       With no decimal second and with or without decimal point.
+       With no decimal second, with or without decimal point.
        Up to 6 decimals second ( microseconds ).
     
-    Added Get Milli and Set Milli secondsé.
+    Added Get Milli and Set Milli seconds.
 
     Added Get Micro and Set Micro seconds.
 

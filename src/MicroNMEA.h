@@ -254,7 +254,7 @@ public:
 	}
 
 	/**
-	 * @brief Get the Micros part of the second
+	 * @brief Get the Micros part of the second. Some GPS like TRIMBLE, return 6 digits after the decimal dot.
 	 *
 	 * @return uint16_t getMicros
 	 */
@@ -263,7 +263,7 @@ public:
 	}
 
 	/**
-	 * @brief Set the Micros part of the second
+	 * @brief Set the Micros part of the second. Some GPS like TRIMBLE, return 6 digits after the decimal dot.
 	 *
 	 * @return none
 	 */
@@ -360,7 +360,8 @@ private:
 
 	// Variables parsed and kept for user
 	char _navSystem;
-	bool _isValid, _isDataValid, _isFixValid;   //_isValid from RMC "Data valid",  _isFixValid from GGA "position Fix Indicator" between 2 and 5
+	bool _isValid, _isDataValid, _isFixValid;   //_isDataValid from RMC "Data valid",  _isFixValid from GGA "position Fix Indicator" between 2 and 5, _isValid = ( _isFixValid OR _isDataValid )
+
 	long _latitude, _longitude; // In millionths of a degree
 	long _altitude; // In millimetres
 	bool _altitudeValid;

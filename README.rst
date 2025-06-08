@@ -18,13 +18,15 @@ NMEA sentences can easily be sent to an output stream with the
 as well as the correct ``<CR><LF>`` terminators.
 
 Release note :
-    Some GPS return UTC time with up to 6 decimals second
+    Handle UTC time :
+       With no decimal second and with or without decimal point.
+       Up to 6 decimals second ( microseconds ).
+    
+    Added Get Milli and Set Milli secondsé.
 
-    Added Get Set Milli seconds
+    Added Get Micro and Set Micro seconds.
 
-    Added Get Set Micro seconds
-
-    Definition of IsValid = ( IsFixValid OR IsDataValid )
+    Add boolean Definition of IsValid = ( IsFixValid OR IsDataValid )
 
 License
 -------
